@@ -2,16 +2,9 @@
   "bindings": [
     {
       "schedule": "0 */15 * * * *",
-      "name": "timer",
+      "name": "req",
       "type": "timerTrigger",
       "direction": "in"
-    },
-    {
-      "webHookType": "",
-      "name": "req",
-      "type": "httpTrigger",
-      "direction": "in",
-      "authLevel": "anonymous"
     },
     {
       "name": "res",

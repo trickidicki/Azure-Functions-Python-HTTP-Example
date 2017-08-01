@@ -1,6 +1,12 @@
 {
   "bindings": [
     {
+      "schedule": "0 */15 * * * *",
+      "name", "req",
+      "type": "timerTrigger",
+      "direction": "in"
+    },
+    {
       "webHookType": "",
       "name": "req",
       "type": "httpTrigger",

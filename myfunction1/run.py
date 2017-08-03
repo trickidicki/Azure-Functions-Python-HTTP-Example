@@ -11,6 +11,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 
 import json
 from AzureHTTPHelper import HTTPHelper
 
+postData = open(os.environ['req'], "r").read()
+print postData
+
 # This is a little class used to abstract away some basic HTTP functionality
 http = HTTPHelper()
 

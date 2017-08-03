@@ -28,8 +28,8 @@ print http.headers
 print
 
 print "--- OTHER ENVIRONMENTAL VARIABLES ---"
-for x in http.env:
-    print x
+for x,v in http.env.items():
+    print v
 print
 
 

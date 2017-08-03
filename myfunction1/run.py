@@ -14,7 +14,7 @@ from AzureHTTPHelper import HTTPHelper
 print "--- REQ-DATA ---"
 print "File: " + os.environ['req']
 postData = open(os.environ['req'], "r").read()
-print "Content [" + len(postData) + " bytes]: " + postData
+print "Content [" + str(len(postData)) + " bytes]: " + postData
 
 # This is a little class used to abstract away some basic HTTP functionality
 http = HTTPHelper()

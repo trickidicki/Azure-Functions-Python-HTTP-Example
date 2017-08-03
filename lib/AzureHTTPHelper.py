@@ -16,14 +16,15 @@ class HTTPHelper(object):
         self._query = {}
         self._env = {}
         
-        for x in os.environ:
+        for x,v in os.environ:
             if x[:12] == "REQ_HEADERS_":
                 self._headers[x[12:].lower()] = os.environ[x]
             
             elif x[:10] == "REQ_QUERY_":
                 self._query[x[10:].lower()] = os.environ[x]
             
-            self._env[x] = str(os.environ[x])
+            self._env[x.lower()] = str(os.environ[x]) + ":" + v
+
     
     @property
     def headers(self):

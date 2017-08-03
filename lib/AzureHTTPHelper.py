@@ -23,7 +23,7 @@ class HTTPHelper(object):
             elif x[:10] == "REQ_QUERY_":
                 self._query[x[10:].lower()] = os.environ[x]
             
-            self._env[x.lower()] = str(os.environ[x]) + ":" + v
+            self._env[x] = x + ":" + v
 
     
     @property
